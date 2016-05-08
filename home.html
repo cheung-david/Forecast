@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>
+<script>
+	document.createElement('video');
+</script>
+<![endif]-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+        <video autoplay loop id="bgvid">
+            <source src="video/cloudsm.webm" type="video/webm">
+            <source src="video/cloudsm.mp4" type="video/mp4">
+        </video>
+        
+        <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+           <div class="jumbotron">
+            <h4>Forecast by City</h4>
+            <form ng-submit="submit()">
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model="city">
+                    </div>
+                    <input type="submit" value="Get Forecast" class="btn btn-primary">
+                    </div>
+                </div>
+        </form>
+    </div>
+
+</body>
+</html>

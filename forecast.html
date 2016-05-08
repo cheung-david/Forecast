@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forecasts</title>
+</head>
+<body>
+   <p><a href="#/" class="btn btn-default" style="float:right">Back To Search</a></p>
+    <h1> Forecast for {{ city }}</h1>
+    <hr/>
+                 <p>Days:</p>
+       <ul class="pagination" >
+            <li id="days" ng-class="{'active': numDays==3}"><a href="#/forecast/3" >3</a> </li>
+            <li ng-class="{'active': numDays==5}"><a href="#/forecast/5" >5</a> </li>
+            <li ng-class="{'active': numDays==7}"><a href="#/forecast/7" >7</a> </li>
+        </ul>
+    <hr/>
+    <div ng-repeat="weather in weatherResult.list">
+        <div class="row">
+            <div class="col-md-12">
+                <weather-summary weather="weather" convert-temp="convertToCelcius(temp)" convert-date="toDate(date)" date-format="MMM d, y"></weather-summary>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

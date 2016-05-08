@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ convertDate({date: weather.dt}) | date : dateFormat}}</h3>
+    </div>
+    <div class="panel-body">
+        Overview: {{ weather.weather[0].description }}
+        <img ng-src="http://openweathermap.org/img/w/{{ weather.weather[0].icon }}.png" alt="Weather">
+        <br>
+        <div class="panel panel-default">
+            <div class="panel-heading">Temperature</div>
+            <div class="panel-body">
+                <div class="well well-sm">
+                    Daytime: {{ convertTemp({temp: weather.temp.day}) }}&deg;C
+                    <br>
+                    Evening: {{ convertTemp({temp: weather.temp.eve}) }}&deg;C
+                    <br>
+                    Night: {{ convertTemp({temp: weather.temp.night}) }}&deg;C           
+                </div>                 
+            </div>
+           
+        </div>
+    </div>
+</div>

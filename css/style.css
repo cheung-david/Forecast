@@ -1,0 +1,120 @@
+html, body, input, select, textarea
+{
+    font-size: 1.08em !important; 
+}
+
+body{
+    background: url(https://images.unsplash.com/uploads/1412455906842d646f1ce/7bf17d33?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=b82bee1f37deb4f3db9233cfcd7305c3) no-repeat;
+}
+
+.pagination{
+    margin: -5px;
+
+}
+
+.panel{
+    opacity: 0.7;
+}
+
+.vertical-center {
+ min-height: 90%;  
+ min-height: 90vh; 
+ width: 100%;
+ display: flex;
+ align-items: center;
+}
+
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(https://images.unsplash.com/uploads/1412455906842d646f1ce/7bf17d33?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=b82bee1f37deb4f3db9233cfcd7305c3) no-repeat;
+    background-size: cover; 
+}
+
+video { display: block; }
+
+
+.fade {
+    position: absolute;  
+    height: 50%;
+    width: 80%;
+    top: 100px;
+    opacity: 1;
+}
+
+.jumbotron{
+    position: absolute; 
+    opacity: 0.8;
+    top: 150px;
+    width: 100%;
+}
+
+/*
+
+
+.navbar {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;    
+}
+
+.navbar.ng-enter-prepare{
+    opacity: 1;
+}
+
+.navbar.ng-enter {
+    opacity: 0;
+}
+.navbar.ng-enter-active {
+    opacity: 1;
+}
+.navbar.ng-leave {
+    opacity: 1;
+}
+.navbar.ng-leave-active {
+    opacity: 0;
+}*/
+
+.fade.ng-enter,
+.fade.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.fade.ng-enter {
+    opacity: 0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}
+
+.panel-body{
+    padding-bottom: 0px;
+}
+
+.navbar{
+    border-radius: 0;
+}
+
+@media screen and (max-device-width: 750px) {
+    html {
+         background: url(https://images.unsplash.com/uploads/1412455906842d646f1ce/7bf17d33?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=b82bee1f37deb4f3db9233cfcd7305c3) #000 no-repeat center center fixed;
+    }
+    #bgvid {
+        display: none;
+    }
+}
