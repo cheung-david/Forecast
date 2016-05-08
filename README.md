@@ -1,0 +1,1 @@
+A single page weather application, displays the temperature and weather of any region. Implemented in AngularJS and HTML5
